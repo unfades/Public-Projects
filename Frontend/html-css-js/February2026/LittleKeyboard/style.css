@@ -1,0 +1,135 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+
+:root{
+    --angle: 0deg;
+}
+
+body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+    background: rgb(0, 0, 0);
+    z-index: 0;
+}
+
+input{
+    color: rgb(100, 100, 100);
+    background: white;
+    position: absolute;
+    border-radius: 8px;
+    border: 0.5px solid black;
+    text-align: center;
+    left: 50%;
+    bottom: 100%;
+    transform: translate(-50%,-50%);
+    outline: none;
+    width: clamp(10%, 10vw, 100%);
+    height: 15%;
+}
+
+
+@property --angle{
+    syntax: "<angle>";
+    initial-value: 0deg;
+    inherits: false;
+}
+
+div.board{
+    position: relative;
+    background: rgb(13, 13, 13);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1rem;
+    margin-top: 10%;
+    
+}
+
+div.board::after, div.board::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    z-index: -1;
+    padding: 2px;
+    border-radius: 10px;
+    background-image: conic-gradient(from var(--angle), violet, indigo, blue, green, yellow, orange, red, violet,
+    violet, indigo, blue, green, yellow, orange, red, violet);
+    animation: 3s spin linear infinite;
+}
+
+
+div.board::before{
+    filter: blur(5px);
+    opacity: 0.6;
+}
+
+div.scale{
+    transform: scale(3);
+}
+
+div.board div{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    position: relative;
+    button{
+        min-width: 30px;
+        color: #fff;
+        background: black;
+        border: 1px solid black;
+        border-radius: 8px;
+        padding: 5px;
+        margin: 2px;
+        position: relative;
+    }
+}
+
+div button{
+    position: relative;
+  isolation: isolate;
+}
+
+button::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+    padding: 2px;
+    border-radius: 10px;
+    background: linear-gradient(black 0) content-box, conic-gradient(from var(--angle), violet, indigo, blue, green, yellow, orange, red, violet,
+    violet, indigo, blue, green, yellow, orange, red, violet);
+    animation: 3s spin linear infinite;
+}
+
+@keyframes spin{
+    from{
+        --angle: 0deg;
+    }to{
+        --angle: 360deg;
+    }
+}
+
+/* add media query for sensitive eyes */
+@media (prefers-reduced-motion: no-preference){
+    div.board::before,div.board::after, button::before,button::after{
+        animation: 10s spin linear infinite;
+    }
+}

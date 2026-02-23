@@ -1,0 +1,238 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    /* overflow-x: hidden; */
+    max-width: 100%;
+}
+
+
+.stickynav{
+    width: 100%;
+    height: auto;
+    background: rgb(19, 19, 19);
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    ul{
+        display: flex;
+        flex-direction: row;
+        padding: .2rem ;
+
+        /* REMOVES dots from list */
+        li{
+            list-style: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            a{
+                text-decoration: none;
+                color: white;
+                position: relative;
+                align-self: center;
+                justify-self: center;
+                
+                img{
+                    justify-self: center;
+                    position: relative;
+                    top: .2rem;
+                    left: .1rem;
+                }
+            }
+        }
+    }
+}
+
+.stickynav div{
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+
+.helpcenter{
+    position: relative;
+    top: .1rem;
+}
+
+/* Left Nav Done */
+
+header,main,footer {
+    width: 100%;
+}
+
+.navbuttons input{
+    background: rgb(34, 34, 34);
+    border-radius: 5px;
+    border: .1rem solid white;
+    padding: .5rem;
+    color: white;
+    font-size: medium;
+}
+
+input.bluebutton{
+    background: rgb(71, 68, 212);
+    border: 1px solid rgb(71, 68, 212);
+    color: white;
+    padding: .5rem 1.5rem;
+}
+
+.navbuttons input:hover{
+    cursor: pointer;
+
+}
+
+input.bluebutton:hover{
+    background: #fff;
+    border: 1px solid #fff;
+    color: black;
+    transition: .2s ease-in-out;
+    cursor: pointer;
+}
+
+/* Navbar now done proper */
+
+/* start mid part with search */
+
+.help{
+    width: 100%;
+    height: auto;
+    background: rgb(243, 217, 227);
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 1px black;
+    h1{
+        padding: 3rem;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 3rem;
+    }
+}
+
+input.bigsearch{
+    padding: 1rem;
+    width: 33rem;
+    width: clamp(400px, 30vw,1000px);
+    border: .1rem solid black;
+    border-radius: 5px;
+    outline: none;
+}
+
+div.help{
+    max-width: 100%;
+}
+
+.helpdiv{
+    position: relative;
+}
+
+a.bigsearcharrow{
+    font-family: Arial, Helvetica, sans-serif;
+    position: absolute;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 2rem;
+    right: 10%;
+    top: .2rem;
+}
+
+.bigsearch:active{
+    border: .1rem solid rgb(89, 91, 248);
+
+}
+
+.bigsearch:hover{
+    border: .1rem solid rgb(89, 91, 248);
+}
+
+
+.container{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 2rem;
+    padding-bottom: 6rem;
+    margin: 5rem;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.footer{
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 4rem;
+    height: auto;
+    margin-top: auto;
+    background: black;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    padding-top: 4rem;
+    padding-left: 10rem;
+    padding-bottom: 10rem;
+    position: relative;
+
+    h4{
+        font-family: Arial, Helvetica, sans-serif;
+        padding-bottom: 2rem;
+        font-size: larger;
+    }
+
+    li{
+        list-style: none;
+        padding-bottom: .5rem;
+    }
+}
+
+.logocopyright{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 2rem;
+}
+
+.footerlinks ul{
+    padding-bottom: 4rem;
+}
+
+@media(max-width:1000px){
+
+    .stickynav{
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        align-items:center;
+        justify-content: space-around;
+    }
+
+    .stickynav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navbuttons input{
+        width: 100%;
+        margin-bottom: .5rem;
+    }
+}

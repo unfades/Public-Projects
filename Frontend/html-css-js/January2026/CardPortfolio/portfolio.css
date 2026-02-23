@@ -1,0 +1,115 @@
+
+body{
+    height: 100vh;
+    background-image: url("images/city.png");
+    background-attachment: fixed; /* key property */
+}
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 5rem;
+    color: white;
+}
+
+h2{
+    display:flex;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: white;
+    font-size: 3rem;
+}
+
+#cards-container{
+    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.card{
+    padding: 10px;
+    padding-bottom: 0px;
+    outline: 2px solid rgb(255, 111, 0);
+    border-radius: 8px;
+    /* max-width: 500px; */
+    /* background: rgba(0, 0, 0, 0.5); */
+    background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),  /* top: semi-transparent black */
+    rgba(0, 0, 0, 0.3),  /* middle: more transparent */
+    rgba(255, 132, 0, 0.361)     /* bottom: fully transparent */
+    );
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    max-width: 25rem;
+    transform: scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+.card img{
+    border: 2px solid orange;
+    border-radius: 50%;
+    box-shadow:0px 0px 20px rgb(0, 0, 0);
+    width: 10rem;
+    transition: transform 0.5s ease;
+}
+
+.card img:hover{
+    transform: scale(1.05);
+    transition: transform 0.5s ease;
+}
+
+.center{
+    margin-bottom: 2%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 27.5rem;
+    /* outline: 1px solid red; */
+    min-height: 40vh;
+}
+.card p{
+    width: 100%;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: start;
+    /* outline: 1px solid red; */
+}
+
+.card input{
+    margin-top: 0px;
+    margin: 0.4rem;
+    padding-bottom: 5px;
+    color: orange;
+    background-color: black;
+    border-radius: 8px;
+    height: 2.5rem;
+    width: 10rem;
+    font-size: x-large;
+    border: 1px solid;
+    border-color: orange;
+    transform: scale(1);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.card:hover{
+    box-shadow: 0px 0px 30px black;
+    transition-duration: 500ms;
+    transform: scale(1.05);
+}
+
+.card input:hover{
+    box-shadow: 0px 0px 30px black;
+    transition-duration: 500ms;
+    cursor:pointer;
+    transform: scale(1.05);
+}

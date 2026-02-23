@@ -1,0 +1,66 @@
+body{
+    background-image: url("images/Knight-Background.png");
+    height:100vh;
+    background-size: contain;  /* ✅ keeps full image sharp */
+    background-size: 50rem; /* I made it 50 because it is now bigger.*/
+    background-repeat: no-repeat;
+    background-color: black;   /* fills leftover space cleanly */
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+h1{
+    display: flex;
+    justify-content: center;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color:bisque;
+}
+
+h1:hover{
+    transform: scale(1.10);
+    transition: 500ms;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    /* outline: 1px solid red; */
+    max-width: 40rem;
+}
+
+.app img{
+    min-width: 10rem;
+    max-width: 10rem;
+    border-radius: 2rem;
+}
+
+
+.app img:hover{
+    min-width: 10rem;
+    max-width: 10rem;
+    border-radius: 2rem;
+    transform: scale(1.10);
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.8);
+    transition: 500ms;
+}
+
+.app img:hover + p{
+    transform: scale(1.10);
+    transition: 500ms;
+}
+
+.app p{
+    font-size: 1.2rem;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 0.1rem;
+    color: bisque;
+    text-shadow: 0 5px 8px rgba(0, 0, 0, 0.8);
+}

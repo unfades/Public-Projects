@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+:root {
+
+
+  /* bg colors */
+  --bg-light: hsl(240, 60%, 95%);
+  --bg: hsl(240, 60%, 90%);
+  --bg-dark: hsl(240, 60%, 70%);
+  /* for button darker pressing */
+  --bg-darker: hsl(240, 60%, 60%);
+  /* colors */
+  --text-main: hsl(240, 60%, 20%);
+
+  /* small shadow */
+  /* you know the syntax */
+  /* xoff yoff blur spread color inset */
+  --shadow-s: 0 1px 5px 1px rgba(0, 0, 0, 0.157);
+
+  /* made glowy effect for img */
+  --img-glow: 0 10px 50px 1px var(--bg-dark);
+}
+
+body {
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bg);
+}
+
+/* cleaner as it resets all list styles instead of rewriting
+for each list style, its good*/
+ul {
+  list-style: none;
+
+  /* I applied this as well */
+  li {
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  background: aquamarine;
+
+}
+
+nav.navbar {
+  box-shadow: var(--shadow-s);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  min-width: 100%;
+  background: var(--bg-light);
+  padding: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 600;
+
+  div.navdiv a {
+    text-decoration: none;
+    font-size: xx-large;
+    color: var(--text-main);
+
+    span.whitespan {
+      color: var(--text-main);
+    }
+  }
+
+  div.navdiv a:hover {
+    color: var(--bg-dark);
+
+    span.whitespan {
+      color: var(--bg-dark);
+    }
+  }
+
+  ul.nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+
+    li {
+      a {
+        color: var(--text-main);
+      }
+      a:hover {
+        color: var(--bg-dark);
+      }
+    }
+  }
+}
+
+
+section.hero{
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  padding: 200px 40px;
+}
+
+div.hero-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+  div.hero-description {
+    h1 {
+      color: var(--text-main);
+      font-size: 3rem;
+      max-width: 75%;
+      span.hero-title {
+        color: var(--bg-dark);
+      }
+
+      padding-bottom: 1rem;
+    }
+
+    p.subtitle {
+      font-size: x-large;
+      padding-bottom: 1rem;
+    }
+
+    p.description {
+      font-size: medium;
+      max-width: 75%;
+      padding-bottom: 1rem;
+    }
+  }
+
+  div.hero-picture {
+    img {
+      max-width: 350px;
+      border: .4rem solid var(--bg-dark);
+      border-radius: 50%;
+      box-shadow: var(--img-glow);
+    }
+  }
+}
+
+.button{
+  border: 2px solid var(--bg-dark);
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  color: var(--bg-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  background-color: var(--bg-dark);
+}
+
+.button-primary{
+  color: white;
+}
+
+.button-primary:hover{
+  cursor: pointer;
+  background-color: var(--bg-darker);
+  border: 2px solid var(--bg-darker);
+}
+
+.button-secondary{
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.button-secondary:hover{
+  cursor: pointer;
+  background-color: var(--bg-dark);
+  border: 2px solid var(--bg-dark);
+  color: white;
+}
+
+.button:active{
+  transform: scale(1.02);
+}

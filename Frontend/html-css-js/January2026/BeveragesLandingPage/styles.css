@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    min-height:100vh;
+    background: linear-gradient(to bottom, #00172b, #ffcc5e), url(images/beach.png);
+    background-blend-mode: multiply;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100vw;
+    min-width: 50%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo img{
+    border-radius: 5px;
+    width: 1.5em;
+    height: auto;
+    border: 1px solid rgb(221, 255, 0);
+    margin-top: .2rem;
+}
+
+.navbar{
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    padding-left: 0.5rem;
+    padding-right: 3rem;
+    background: linear-gradient(to bottom, #00bb6d, #00bef3);
+    gap: 3rem;
+    border-bottom: 0.1rem solid #ffffff;
+    box-shadow: 0px 0px 8px #0059ff;
+}
+
+.navigation-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    transform: translateY(-0.3rem);
+}
+
+li{
+    display: inline;
+    list-style: none;
+}
+
+.navigation-links a{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: linear-gradient(to top,rgb(255, 255, 255), rgb(255, 255, 255));
+    color: transparent;
+    background-clip: text;
+    text-decoration: none;
+    padding-bottom: .10rem;
+    font-weight: bold;
+}
+
+.navigation-links a:hover{
+    border-bottom: 2px solid rgb(0, 255, 255);
+    padding-bottom: .30rem;
+}
+
+.center-content{
+    display: flex;
+    justify-content: center;
+}
+
+
+.main{
+    width: 100%;
+    height: auto;
+}
+
+
+.heading{
+    display: flex;
+    justify-content: center;
+    
+    background: linear-gradient(to bottom, #00ffa6, #00d5ff);
+    outline: 0.15rem solid rgb(0, 225, 255);
+    border-radius: 8px;
+    padding-bottom: .5rem;
+    margin-top: 5rem;
+    margin-bottom: 3rem;
+    width: 60rem;
+    text-align: center;
+}
+
+h1{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    position:relative;
+}
+
+h1 span{
+    border-bottom: 2px dashed #fff700;
+    background-image: linear-gradient(to top,rgb(255, 51, 0), rgb(255, 200, 0));
+    color: transparent;
+    background-clip: text;
+}
+.logo-text {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    bottom: .2rem;
+}
+
+.heading-2{
+    padding-bottom: 5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+}
+
+.card{
+    border-radius: 8px;
+    border: .15rem solid skyblue;
+    width: 12rem;
+    height: 18rem;
+    background: #020024;
+    background: radial-gradient(circle,rgb(2, 0, 36) 0%, rgba(9, 9, 121, 0.699) 35%, rgba(0, 213, 255, 0.477) 100%);
+    margin-bottom: 2rem;
+}
+
+.card-image{
+    position: relative;
+    left: 4.2rem;
+    top: -2rem;
+}
+
+.heading-3{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    position: relative;
+    top: 1rem;
+}
+
+.card-content{
+    font-family: "Playfair Display", serif;
+    font-optical-sizing: auto;
+    font-weight:bold;
+    font-style: normal;
+}
+
+.heading-3 input{
+     margin-top:6rem;
+     justify-content:end;
+     border: 2px solid skyblue;
+     color: white;
+     background: black;
+     padding:5px;
+     border-radius: 5px;
+}
+
+.cards{
+    display: flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap: wrap;
+    height: auto;
+}
+
+.footer{
+    box-shadow: 0px 0px 10px black;
+    background: linear-gradient(to bottom, black, rgb(0, 47, 72));
+    margin-top: auto;
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links{
+    
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+    background-image: linear-gradient(to top,rgb(188, 188, 188), rgb(207, 207, 207));
+    color: transparent;
+    background-clip: text;
+    font-size: x-large;
+}
+
+.footer-1 h4 span{
+    background-image: linear-gradient(to top,rgb(0, 255, 251), rgb(38, 255, 0));
+    color: transparent;
+    background-clip: text;
+}
+
+.footer-1 p img{
+    width: 20px;
+    height: 20px;
+    border-radius: 8px;
+    position: relative;
+    top: .2rem;
+    right: .2rem;
+}
+
+.copyright{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: white;
+    position: relative;
+    top: -0.2rem;
+}

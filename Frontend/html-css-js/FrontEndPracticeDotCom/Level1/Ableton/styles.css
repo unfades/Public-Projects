@@ -1,0 +1,362 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+body{
+    /* background-color: rgb(19, 63, 101); */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.navbar img{
+    max-width: 3.5em;
+}
+
+.navbar img:hover{
+    cursor: pointer;
+}
+
+.navbar{
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.menu{
+    /* outline: 1px solid red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding-top: 0.2rem;
+    padding-left: 0.2rem;
+    padding-bottom: 0.5rem;
+    /* border-bottom: 0.01rem solid #1717176d; */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* soft shadow */
+}
+
+.topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #fff;
+}
+
+.aboutjobs{
+    padding: 1.5rem;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.aboutjobs a{
+    font-size: 1.8rem;
+}
+.aboutjobs a:hover{
+    color: orange;
+}
+
+.center{
+    /* outline: 1px solid red; */
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    
+}
+
+.center img{
+    width: clamp(500px, 100vw, 2000px);
+    min-width: 85%;
+}
+
+.centerparagraphs{
+    /* outline: 1px solid red; */
+    padding-top: 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 2rem auto;
+}
+
+.centerparagraphs p{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+.smallertext p{
+    padding: 2rem;
+    font-weight: 300;
+    font-size: 1.35rem;
+}
+
+.backbox{
+    /* outline: 1px solid red; */
+    /* height: 1500px; */
+    display: flex;
+    justify-content: end;
+    z-index: 0;
+    position: relative;
+}
+
+.frontbox{
+    position: relative;
+    /* outline: 1px solid red; */
+}
+
+.pad{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    top: 10rem;
+    left: 30rem;
+    z-index: 1;
+    /* outline: 1px solid red; */
+}
+
+.pad img{
+    width: clamp(250px, 50vw, 750px);
+        
+}
+
+
+/* === Plyr Customization === */
+  :root {
+    --plyr-color-main: #0066ff; /* Ableton-style blue */
+    --plyr-video-control-color: #ffffff;
+    --plyr-video-control-color-hover: #ffffff;
+    --plyr-video-control-background-hover: #0066ff;
+    --plyr-control-radius: 50%;
+    --plyr-control-spacing: 12px;
+    --plyr-control-padding: 10px;
+    --plyr-range-thumb-background: #0066ff;
+  }
+
+  /* Big blue circular play button */
+  .plyr--video .plyr__control--overlaid {
+    background: #0066ff !important;
+    border: none !important;
+    
+    width: 4rem !important;
+    height: 4rem !important;
+    border-radius: 50% !important;
+    transition: 0.3s ease;
+  }
+
+  .plyr--video .plyr__control--overlaid:hover {
+    background: #004acc !important;
+  }
+
+  /* Clean look */
+  .plyr--video {
+    box-shadow: none !important;
+    border: none !important;
+    width: clamp(500px, 50vw, 2500px);
+  }
+
+  .plyr__controls {
+    background: transparent !important;
+  }
+
+  body {
+    font-family: "Poppins", sans-serif;
+  }
+
+  .plyr--video .plyr__control--overlaid svg {
+    transform: translateX(17%); /* adjust px value as you like */
+  }
+
+  .plyr__controls {
+  transition: opacity 0.4s ease;
+  }
+
+.plyr--paused .plyr__controls {
+  opacity: 0;
+}
+
+.plyr--playing .plyr__controls {
+  opacity: 1;
+}
+
+#video-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start; /* left align contents */
+  width: fit-content;     /* wrap tightly around video width */
+  margin: 0 auto;          /* center the whole block if needed */
+}
+
+
+.video-caption p{
+
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  color: #111;
+  font-weight: 400;
+
+}
+
+
+.frontbox2{
+    position: relative;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backbox2{
+  /* outline: 1px solid red; */
+    /* height: 1500px; */
+    display: flex;
+    justify-content: start;
+    z-index: 0;
+    position: relative;
+}
+
+.pad2{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    top: 30rem;
+    left: 30rem;
+    z-index: 1;
+    /* outline: 1px solid red; */
+}
+
+.pad3{
+
+  position: absolute;
+  z-index: 1;
+  top: 50rem;
+  left: 90rem;
+}
+
+.pad3 img{
+  width: 50rem;
+}
+
+.frontbox3{
+    position: relative;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.backbox3{
+  /* outline: 1px solid red; */
+    /* height: 1500px; */
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+    position: relative;
+}
+
+.backbox3 img{
+  filter: hue-rotate(130deg);
+  height: 100rem;
+}
+
+.pad4{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    top: 30rem;
+    z-index: 1;
+    /* outline: 1px solid red; */
+}
+
+.frontbox4{
+    position: relative;
+    /* outline: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pad6{
+  position: absolute;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    top: 30rem;
+    z-index: 1;
+    /* outline: 1px solid red; */
+}
+
+.pad6 div{
+  background: rgb(157, 180, 225);
+  width: 750px;
+  height: 750px;
+}
+
+.divd div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.divd div a{
+  position: relative;
+  right: 8.5%;
+}
+
+
+.footer{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    text-align: start;
+    background: black;
+    color: white;
+    margin-top: auto;
+}
+
+@media (max-width:1300px){
+    .pad{
+        left:0rem;
+    }
+}
+
+@media (max-width:250px){
+    .pad{
+        top:3rem;
+    }
+
+    .pad img{
+        width: 100px;
+    }
+}
+
+
