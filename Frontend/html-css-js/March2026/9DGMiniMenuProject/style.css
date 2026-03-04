@@ -1,0 +1,116 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+  --innerbox: inset 0 1px 2px #ffffff50, /* top highlight */ 0 2px 4px #00000030,/* dark shadow */ 0 4px 8px #00000015; /* soft shadow */
+
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+  background: radial-gradient(orange, black);
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100dvh;
+  background-color: black;
+  h1{
+    background-color: orange;
+    border: 1px solid black;
+    padding: 1rem 2rem;
+    /* top bottom.
+     top leftright bottom.
+     topleft topright bottomright bottomleft */
+    margin: 0 4rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+
+    box-shadow: 0 0 50px 10px orange;
+    border-color: orange;
+    border: .02rem solid yellow;
+  }
+
+  div{
+    margin-top: 4rem;
+    border: .01rem solid black;
+    border-radius: 8px;
+    width: 95%;
+    h2{
+      background: orange;
+      box-shadow: var(--innerbox);
+      border-radius: 7px 8px 0 0;
+      border-bottom: .02rem solid hsla(0, 0%, 0%, 0.1);
+      padding: 16px 32px;
+      text-align: center;
+      font-size: 32px;
+    }
+
+    li{
+      list-style-type: none;
+      background: whitesmoke;
+      text-align: center;
+      border-bottom: .02rem solid hsla(0, 0%, 0%, 0.696);
+      padding: 16px 32px;
+      a{
+        text-decoration: none;
+        color: hsla(0, 0%, 5%, 1);
+        text-align: center;
+        font-size: 32px;
+      }
+    }
+
+    li:hover{
+      background-color: hsla(0, 0%, 5%, 1);
+      a{
+        color: white;
+        text-shadow: 0 0 10px orange;
+      }
+      border-color: orange;
+      border-left: .02rem solid orange;
+      border-right: .02rem solid orange;
+      border-top: .02rem solid orange;
+      cursor: pointer;
+      /* box-shadow: 0 0 50px 10px orange; */
+      /* skipped this as cannot bring to front
+      at this time do not know how */
+    }
+
+    li:last-child{
+      
+      border-radius: 0 0 7px 7px;
+    }
+
+  }
+  
+  p{
+    color: white;
+    font-size: .75rem;
+    a{
+      color: orange;
+    }
+    a:visited{
+      color: hsl(271, 30%, 53%);
+    }
+    a:hover, a:focus{
+      color: hsl(39, 90%, 50%);
+    }
+  }
+}
+
+/* learned and used first-child and 
+last-child of elements */
+
+/* to make text glow use text-shadow then
+just like box shadow yeah */
