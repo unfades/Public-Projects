@@ -44,7 +44,7 @@ main{
 
   div{
     margin-top: 4rem;
-    border: .01rem solid black;
+    /* border: .02rem solid black; */
     border-radius: 8px;
     width: 95%;
     h2{
@@ -61,6 +61,12 @@ main{
       list-style-type: none;
       background: whitesmoke;
       text-align: center;
+      /* border-bottom: .02rem solid hsla(0, 0%, 0%, 0.696);
+      border-top: .02rem solid hsla(0, 0%, 0%, 0.696);
+      border-left: .02rem solid hsla(0, 0%, 0%, 0.696);
+      border-right: .02rem solid hsla(0, 0%, 0%, 0.696); */
+      border: .02rem solid orange;
+      border-top: .0rem solid hsla(0, 0%, 0%, 0.696);
       border-bottom: .02rem solid hsla(0, 0%, 0%, 0.696);
       padding: 16px 32px;
       a{
@@ -78,9 +84,11 @@ main{
         text-shadow: 0 0 10px orange;
       }
       border-color: orange;
-      border-left: .02rem solid orange;
+      /* border-left: .02rem solid orange;
       border-right: .02rem solid orange;
-      border-top: .02rem solid orange;
+      border-bottom: .02rem solid orange;
+      border-top: .02rem solid orange; */
+      border-color: orange;
       cursor: pointer;
       /* box-shadow: 0 0 50px 10px orange; */
       /* skipped this as cannot bring to front
