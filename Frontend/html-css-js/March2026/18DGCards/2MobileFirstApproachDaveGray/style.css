@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* i kept colors to make it easier to see when things change according
+to our media queries settings. */
+/* Resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* img rest as its an inline element */
+img{
+  display: block;
+  /* this means it will not overflow its container, the figure */
+  max-width: 100%;
+  /* google recommends adding height and width both in html, thats why we reset it to auto in css. */
+  height: auto;
+}
+
+/* utility classes */
+.nowrap{
+  /* you know when words break in css?,
+  this prevents that and keeps sentences
+  or words with whitespace together */
+  white-space: nowrap;
+}
+
+
+/* general styles */
+
+/* makes your site scrolling smooth
+when clicking anchor tags leading
+to other places on ids */
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  font: 1.5rem "Nunito", sans-serif;
+  min-height: 100vh;
+  background-color: #475569;
+  background-image: radial-gradient(whitesmoke, #475569);
+  display: flex;
+  flex-direction: column;
+}
+
+header, footer{
+  position: sticky;
+  background-color: #1E293B;
+  color: whitesmoke;
+  text-align: center;
+}
+
+header{
+  top: 0;
+}
+nav{
+  background-color: #fff;
+  padding: 0.5rem;
+  border-bottom: 2px solid black;
+  font-weight: bolder;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a, nav a:visited{
+  color: black;
+}
+
+nav a:hover, nav a:focus{
+  color: hsla(0, 0%, 20%, 0.6);
+}
+
+main{
+  /* kept flex grow because when allowed,
+  main should be able to grow in the flexbox */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+footer{
+  bottom: 0;
+}
+
+/* PROFILE CARD CLASS */
+
+.card{
+  /* you know when you click an anchor
+  and when you have set the id to an element
+  then it goes directly there?
+  well with this you can just specify
+  the margins it should stop at when scrolled
+  like the offset you always wanted when scrolled
+  this is the property which accomplishes
+  that... */
+  /* try uncommenting and commenting
+  and you will know the difference. */
+  scroll-margin-top: 8rem;
+  /* the first value means it can grow
+  to the max width of the container,
+  like it can occupy 100% of the container
+  width. BUT thenext value specifies its
+  max value, so grow no larger than 
+  300px for example */
+  /* width: min(100%); */
+  /* so the card will be max width
+  of 350px, and grow until it can
+  accomplish it. */
+  width: min(100%,350px);
+
+  background-color: #cbd5e1;
+  border: 2px solid #000;
+  border-radius: 15px;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.card figure{
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.card img{
+  border: 5px double #333;
+  border-radius: 50%;
+}
+
+.card figcaption{
+  font-weight: bolder;
+  font-size: 2rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+/* small */
+/* if the width is 576px or more, then it turns green */
+@media screen and (min-width: 576px){
+  body{
+    background-color: green;
+    background-image: radial-gradient(whitesmoke, green);
+  }
+
+  main{
+    justify-content: center;
+    flex-flow: row wrap;
+    padding: 1rem;
+  }
+  .card{
+    width: min(100%, 400px);
+  }
+  /* so you can see the difference
+  the max width changes in the new
+  min function to 400px
+  cards get bigger, jane is first
+  as order is -1 */
+  .card:last-child{
+    order: -1;
+  }
+}
+
+/* medium */
+/* if the width is 768px or more, then it turns green */
+@media screen and (min-width: 768px){
+  body{
+    background-color: gold;
+    background-image: radial-gradient(whitesmoke, gold);
+  }
+  nav{
+    display: none;
+  }
+  .card{
+    width: min(100%, 325px);
+  }
+  /* you know what he did here.
+  all of it. its just to show things 
+  have changed at the breakpoint. */
+  .card figure{
+    flex-flow: column-reverse;
+  }
+  /* looks good without it
+  so removed it no need for 
+  such a small margin on 
+  figcaption */
+  /* .card figcaption{
+    margin: 0.1em 0;
+  } */
+  .card p{
+    margin-top: 1rem;
+  }
+}
+/* large */
+/* if the width is 576px or more, then it turns green */
+@media screen and (min-width: 992px){
+  body{
+    background-color: firebrick;
+    background-image: radial-gradient(whitesmoke, firebrick);
+  }
+  .card{
+    /* made them bigger again as screen is bigger */
+    width: min(100%, 400px);
+  }
+  .card:nth-child(2){
+    order: -1;
+  }
+}
+/* xl */
+/* if the width is 576px or more, then it turns green */
+@media screen and (min-width: 1200px){
+  body{
+    background-color: rebeccapurple;
+    background-image: radial-gradient(whitesmoke, rebeccapurple);
+  }
+  /* this allows them to grow dynamically
+  with the calc function. the calc function
+  lets us mix different units together.
+  the below setting means,
+  either cards are going to be 33% of main minus
+  1 rem sized or if they are getting too wide..., 
+  wider enough to be 500px... 
+  then they will stop at 500px*/
+
+  /* THIS IS THE RESPONSIVENESS YOU WERE
+  SEARCHING FOR THIS IS IT THIS IS IT. */
+  .card{
+    width: min(calc(33% - 1rem),500px);
+  }
+  
+}
+/* MOBILE DEVICE LANDSCAPE */
+/* if the width is 576px or more, then it turns green */
+@media screen and (max-height: 425px) and (min-aspect-ratio: 7/4){
+  body{
+    background-color: dodgerblue;
+    background-image: radial-gradient(whitesmoke, dodgerblue);
+  }
+
+  h1{
+    font-size: 1.5rem;
+  }
+  nav{
+    display: none;
+  }
+  main{
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: stretch;
+  }
+
+  .card{
+    width: min(calc(33% - 0.25rem),200px);
+  }
+  .card figcaption, .card p{
+    font-size: 1rem;
+  }
+}
