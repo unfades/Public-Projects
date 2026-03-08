@@ -1,0 +1,176 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;  
+}
+
+:root{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  position: sticky;
+  top: 0;
+}
+/* initially hid burgerlist */
+.main .burgerlist{
+  display: none;
+}
+
+nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+/* initially hide menu */
+nav .burger{
+  position: absolute;
+  right: -999999px;
+}
+
+nav .logodiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  padding-left: 6rem;
+}
+
+.logodiv i{
+  font-size: 24px;
+  padding-right: 2.5rem;
+  color: rgb(41, 98, 241);
+}
+
+.logodiv p{
+  font-size: 28px;
+  font-weight: 500;
+}
+
+/* logdiv done */
+/* started list */
+nav ul{
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 600px;
+  /* handy trick keep playing flexbox zombies */
+  flex-grow: 1;
+  padding: 2rem;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color: grey;
+  font-weight: 500;
+  font-size: 20px;
+}
+/* list done now start on login */
+nav .logindiv{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  padding-right: 6rem;
+}
+.logindiv p{
+  font-size: 20px;
+  color: rgb(68, 68, 68);
+  font-weight: 500;
+  padding-right: 1rem;
+}
+
+.logindiv input{
+  margin-top: .25rem;
+  color: white;
+  font-weight: 500;
+  background-color: rgb(41, 98, 241);
+  border: none;
+  padding: .75rem;
+  border-radius: .35rem;
+}
+.logindiv input:hover, .logindiv input:focus{
+  cursor: pointer;
+}
+
+/* now nav shadows and height adjusting*/
+nav{
+  border-color: blue;
+  max-height: 4.5rem;
+  box-shadow: 0 0 1px .01rem black;
+}
+
+@media screen and (max-width: 945px){
+  nav{
+    justify-content: center;
+  }
+  nav ul{
+    display: none;
+  }
+  nav .logodiv{
+    padding-left: .25rem;
+  }
+  nav .logindiv{
+    padding-right: 0.25rem;
+  }
+  nav .burger{
+    position: relative;
+    right: 1rem;
+    top: 1.2rem;
+    padding: .15rem .25rem;
+    margin-left: auto;
+    border: .13rem solid rgb(68, 68, 68);
+    border-radius: 4px;
+    font-size: 24px;
+    height: fit-content;
+  }
+  nav .burger i{
+    color: rgb(41, 98, 241);
+  }
+  nav .burger:hover, nav .burger:focus{
+    cursor: pointer;
+  }
+  /* made it visible again */
+  .main .burgerlist{
+    display: flex;
+    justify-self: end;
+    justify-content: end;
+    position: absolute;
+    min-width: 100px;
+    background-color: rgba(0, 0, 0, 0.85);
+    border-radius: 0 0 12px 12px;
+    ul{
+      list-style-type: none;
+      text-align: center;
+      padding: 0 2rem;
+
+      li{
+        line-height: 2rem;
+      }
+
+      li a{
+        color: white;
+        font-weight: 500;
+        text-decoration: none;
+      }
+    }
+    height: 0px;
+    transition: .5s ease;
+  }
+
+  .burgerlist.burgerhide{
+    /* before you had height auto set,
+    transitions DO NOT WORK for height 0 to height
+    auto. It works for heights that are fixed */
+    height: 130px;
+    
+  }
+}

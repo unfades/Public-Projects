@@ -1,0 +1,26 @@
+This design is unoptimal because it is not mobile
+responsive. try and make it so
+by starting designing for the smallest device -
+
+and then work your way up to the larger screens
+with media queries.
+
+right now try and salvage it by making a
+burger menu when it reaches 945px
+with a media query, should work out.
+
+a good strat is to make the cloudflow
+go back to the left and then go for
+the burger menu on the right when clicked
+it will open up a side bar and 
+reveal and hide all these options including
+the list and the start free trial can go below
+the cloudflow icon... or the middle?
+
+
+No stick with responsive design.
+Watch how to design a burger menu video.
+And then start over
+mobile responsive from the start,
+make that burger menu from the start.
+get rid of it when screen size allows.
