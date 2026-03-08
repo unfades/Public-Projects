@@ -1,0 +1,151 @@
+/* this time go with mobile responsive */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 2px .01rem rgba(0, 0, 0, 0.5);
+}
+
+nav .topnav {
+  background-color: hsl(27, 100%, 50%);
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  padding: .5rem;
+  text-align: center;
+}
+
+nav .mainnav {
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem .1rem;
+}
+
+.mainnav .logodiv{
+  /* accounting for the space
+  of the logo from fontawesome
+  this should be fine instead
+  of the 1rem initially */
+  padding-left: .75rem;
+}
+
+.mainnav .logodiv ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+  }
+  /* dg firstchild lastchild nth-of-type()
+  nth-child() */
+  li:first-child{
+    font-size: 24px;
+    a{
+      color: hsl(27, 100%, 50%);
+    }
+  }
+
+  li:nth-of-type(2) {
+    font-size: 20px;
+    font-weight: 700;
+  }
+  li:last-child{
+    /* legendary davegray pull 
+    whitespace nowrap*/
+    white-space: nowrap;
+    i{
+      position: relative;
+      bottom: .15rem;
+      left: .25rem;
+      font-size: 10px;
+    }
+  }
+}
+
+.mainnav .searchlistdiv {
+  width: 100%;
+}
+
+.mainnav .searchlistdiv ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+  padding-left: 2rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.mainnav .searchlistdiv ul li {
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  input {
+    outline: none;
+    border: .01rem solid rgba(0, 0, 0, 0.203);
+    padding: .5rem;
+    border-radius: 4px;
+    min-width: 350px;
+  }
+}
+
+.mainnav .shopmenudiv {
+  padding-right: 1rem;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    li {
+      display: flex;
+      a {
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+      }
+    }
+    li:last-child{
+      /* dave gray handy technique stop wrapping text*/
+      white-space: nowrap;
+      a{
+        font-size: 14px;
+        color: white;
+        background-color: hsl(27, 100%, 50%);
+        border-radius: 4px;
+        padding: 6px 12px;
+      }
+      
+    }
+  }
+}
