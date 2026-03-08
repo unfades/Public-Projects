@@ -44,7 +44,7 @@ nav .topnav {
   display: flex;
   gap: 1rem;
   align-items: center;
-  padding: 0 1rem;
+  padding: 0 5rem;
   a{
     text-decoration: none;
     color: black;
@@ -61,7 +61,7 @@ nav .topnav {
 nav .mainnav {
   display: flex;
   justify-content: space-between;
-  padding: .8rem .1rem;
+  padding: .8rem 4rem;
 }
 
 .mainnav .logodiv{
@@ -86,6 +86,18 @@ nav .mainnav {
     font-weight: 700;
     font-size: 28px;
     color: hsl(145, 100%, 36%);
+  }
+
+  .location{
+    position: relative;
+    top: 10px;
+    a{
+      color: white;
+      background-color: hsl(145, 100%, 36%);
+      padding: .5rem;
+      font-size: 24px;
+      border-radius: 12px;
+    }
   }
 }
 
@@ -125,6 +137,12 @@ nav .mainnav {
     color: black;
     font-weight: 500;
     font-size: 16px;
+  }
+
+  a i{
+    font-size: 12px;
+    position: relative;
+    bottom: 2px;
   }
 
   input {
