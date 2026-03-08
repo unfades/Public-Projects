@@ -1,0 +1,175 @@
+/* modified stylehub to become travelco */
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 2px .01rem rgba(0, 0, 0, 0.5);
+}
+
+nav .topnav {
+  background:linear-gradient(to right, 
+                           hsl(127, 61%, 89%) 50%,
+                           hsl(0, 100%, 96%) 100%);
+  color: black;
+  font-weight: 400;
+  font-size: 15px;
+  padding: .5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0 0 .1rem .01rem hsl(145, 100%, 36%);
+}
+
+.topleftdiv, .toprightdiv{
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 0 1rem;
+  a{
+    text-decoration: none;
+    color: black;
+  }
+}
+.topleftdiv i{
+  color: hsl(145, 100%, 36%);
+}
+.toprightdiv i{
+  color: #3d3d3d;
+}
+
+
+nav .mainnav {
+  display: flex;
+  justify-content: space-between;
+  padding: .8rem .1rem;
+}
+
+.mainnav .logodiv{
+  /* accounting for the space
+  of the logo from fontawesome
+  this should be fine instead
+  of the 1rem initially */
+  padding-left: .75rem;
+}
+
+.mainnav .logodiv ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
+  li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 700;
+    font-size: 28px;
+    color: hsl(145, 100%, 36%);
+  }
+}
+
+.mainnav .logodiv span{
+  position: relative;
+  left: 55px;
+  bottom: 2px;
+  p{
+    font-size: 14px;
+    white-space: nowrap;
+    color: #888;
+    font-weight: 400;
+  }
+} 
+
+.mainnav .searchlistdiv {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.mainnav .searchlistdiv ul {
+  list-style-type: none;
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+  padding-left: 2rem;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.mainnav .searchlistdiv ul li {
+  a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    font-size: 16px;
+  }
+
+  input {
+    outline: none;
+    border: .01rem solid rgba(0, 0, 0, 0.203);
+    padding: .5rem;
+    border-radius: 4px;
+    min-width: 350px;
+  }
+}
+
+.mainnav .shopmenudiv {
+  padding-right: 1rem;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    li {
+      display: flex;
+      a {
+        font-weight: 500;
+        color: black;
+        text-decoration: none;
+      }
+    }
+    li:last-child{
+      /* dave gray handy technique stop wrapping text*/
+      white-space: nowrap;
+      a{
+        font-size: 14px;
+        color: white;
+        background-color: hsl(0, 100%, 50%);
+        border-radius: 24px;
+        padding: 12px 24px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1248px){
+  .mainnav .searchlistdiv ul {
+    display: flex;
+    justify-content: center;
+  }
+}
