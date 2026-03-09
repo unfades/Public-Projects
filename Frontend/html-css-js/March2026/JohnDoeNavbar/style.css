@@ -1,0 +1,117 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navbar{
+  width: 80%;
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.navbar .namediv{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+
+/*.navbar .namediv:firstchild means the first child
+that has .namediv as a class */
+/* this is the way, .namediv's div that is the first child*/
+.namediv div:first-child{
+  color: white;
+  background: linear-gradient(135deg, steelblue, hsl(232, 44%, 32%), #222);
+  border-radius: 15%;
+  padding: .4rem;
+  font-size: .8rem;
+  font-weight: 700;
+  height: fit-content;
+}
+.namediv div:last-child{
+  color: black;
+  font-weight: 600;
+}
+
+/* namediv done */
+
+.navbar .listdiv{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.navbar .listdiv ul{
+  list-style-type: none;
+  display:flex;
+  gap: .5rem;
+}
+.navbar .listdiv li{
+  position: relative;
+  overflow: hidden;
+}
+.navbar .listdiv li a{
+  text-decoration: none;
+  font-size: .8rem;
+  color: black;
+  font-weight: 400;
+}
+
+.navbar .listdiv li::after{
+  position: absolute;
+  content: '';
+  background: linear-gradient(135deg, steelblue, hsl(232, 44%, 32%), #222);
+  position: absolute;
+  left: -100%;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  transition: .3s ease-in-out;
+}
+
+.navbar .listdiv li:hover::after{
+  left: 0;
+  transition: .3s ease-in-out;
+}
+
+/* listdiv done */
+
+.navbar .hirediv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .hirediv input{
+  color: white;
+  border: none;
+  border-radius: 4px;
+  background: linear-gradient(135deg, hsl(232, 44%, 32%), #222);
+  padding: .35rem .8rem;
+  font-weight: 500;
+}
+.navbar .hirediv input:hover{
+  cursor: pointer;
+}
+
+header{
+  padding: .5rem 0;
+  box-shadow: 0 0 .01rem .05rem hsla(0, 0%, 0%, 0.116);
+}
