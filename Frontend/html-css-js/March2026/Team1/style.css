@@ -1,0 +1,92 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: whitesmoke;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  min-height: 100dvh;
+}
+
+main{
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, hsl(264, 100%, 15%), hsl(264, 100%, 21%), hsl(264, 100%, 25%), hsl(274, 45%, 38%), hsl(264, 100%, 25%), hsl(264, 100%, 21%), hsl(264, 100%, 15%));
+}
+
+h1{
+  margin-top: auto;
+  margin-bottom: 1rem;
+  /* 2rem is default 16 * 2 as in rem root element font */
+  font-size: 3rem;
+}
+
+p.description{
+  font-size: 18px;
+}
+
+.cards-container{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* you finally did it yourself good job
+  auto 0 means top and bottom however much
+  I will be in the middle, and 0 for left right
+  dab*/
+  margin: auto 0;
+  justify-content: center;
+  
+}
+
+.card{
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  border: 1px solid rgba(245, 245, 245, 0.255);
+  border-radius: 12px;
+  background: hsla(274, 22%, 61%, 0.25);
+  min-height: 400px;
+}
+
+.card img{
+  margin: .5rem 0;
+  border-radius: 50%;
+  width: 150px;
+  height: auto;
+  border: .35rem solid rgb(135, 80, 174);
+}
+.card span{
+  color: hsl(299, 81%, 82%);
+  font-weight: 600;
+}
+
+.card p{
+  max-width: 80%;
+}
+
+.icon-div{
+  border: .01rem solid rgba(255, 255, 255, 0.219);
+  border-radius: 4px;
+  background-color: hsl(231, 53%, 53%);
+  color: hsl(240, 79%, 83%);
+  padding: .25rem;
+  margin: 1rem 0;
+}
