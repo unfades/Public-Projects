@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LoginSCA</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="container">
+      <img src="shubcart.png" alt="stylehub-cart">
+      <h1>StyleHub</h1>
+      <h2>Welcome Back!</h2>
+      <p>Sign in to your StyleHub account to continue shopping.</p>
+      <form>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <!-- setting required when submitted it will say required when not entered -->
+           <!-- also learned that when putting for in labels in html5, it will make it so when clicked
+            it will make the cursor be put in the textbox connected to it-->
+          <input id="email" type="email" placeholder="example@gmail.com" required aria-required="true">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input id="password" type="password" placeholder="Password">
+        </div>
+        <div class="remember-row">
+          <input id="remember-me" name="remember-me" type="checkbox" aria-checked="false">
+          <!-- see here its the same, for = "remember-me and input checkbox id is remember-me,
+           then when you click the text Remember me it will tick the checkbox as well!" -->
+          <label for="remember-me">Remember me</label>
+        </div>
+        <a href="#" class="forgot-pass">Forgot password?</a>
+        <button for= "email" autocomplete="email" required aria-required="true" type="submit" class="submit-btn" aria-label="Sign in to your account">Sign in</button>
+      </form>
+      <div class="or-divider">
+        or sign in with
+      </div>
+      <div class="social-row">
+        <button type="button" class="social-btn" aria-label="Sign in with Google">
+          <i class="fa-brands fa-google"></i>
+        </button>
+        <button type="button" class="social-btn" aria-label="Sign in with Google">
+          <i class="fa-brands fa-x-twitter"></i>
+        </button>
+        <button type="button" class="social-btn" aria-label="Sign in with Google">
+          <i class="fa-brands fa-linkedin"></i>
+        </button>
+      </div>
+      <div class="signup-row">
+        Don't have an account? <a href="#">Sign Up</a>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
