@@ -1,0 +1,124 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  min-height: 100dvh;
+}
+
+main{
+  min-height: 100dvh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+}
+
+h1{
+  margin-bottom: 1rem;
+  /* 2rem is default 16 * 2 as in rem root element font */
+  font-size: 3rem;
+}
+
+h1 span{
+  color: hsl(193, 100%, 51%);
+}
+
+.minds{
+  order: -1;
+  margin-top: auto;
+  border: .01rem solid rgba(255, 255, 255, 0.219);
+  border-radius: 24px;
+  background-color: hsl(185, 92%, 95%);
+  color: hsl(193, 100%, 51%);
+  padding: .5rem 1rem;
+  margin: 1rem 0;
+}
+
+p.description{
+  font-size: 18px;
+  text-align: center;
+}
+
+h2 i{
+  font-size: 18px;
+  position: relative;
+  bottom: 2px;
+}
+
+.cards-container{
+  max-width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  /* you finally did it yourself good job
+  auto 0 means top and bottom however much
+  I will be in the middle, and 0 for left right
+  dab*/
+  margin: auto 0;
+  justify-content: center;
+  
+}
+
+.card{
+  max-width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: 3px solid rgba(0, 234, 255, 0.255);
+  border-radius: 12px;
+  background: white;
+  min-height: 400px;
+}
+
+.card img{
+  margin: 1rem 0;
+  border-radius: 50%;
+  width: 100px;
+  height: auto;
+}
+
+.card h2{
+  font-size: 20px;
+}
+.card span{
+  color: hsl(193, 100%, 51%);
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.card p{
+  max-width: 80%;
+}
+
+.role-div{
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
+}
+
+.icon-div{
+  border: .01rem solid rgba(255, 255, 255, 0.219);
+  border-radius: 4px;
+  background-color: hsl(185, 92%, 95%);
+  color: hsl(240, 79%, 83%);
+  padding: .25rem;
+  margin: 1rem 0;
+}
