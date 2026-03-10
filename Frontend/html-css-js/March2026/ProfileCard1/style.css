@@ -1,0 +1,98 @@
+/* resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+img{
+  display: block;
+}
+
+
+/* utility */
+.nowrap{
+  white-space: nowrap;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: whitesmoke;
+  /* from flexbox zombies again
+  flex grow flex shrink flex basis*/
+  flex-grow: 1;
+  align-self: stretch;
+  /* now main covers body all throughout */
+}
+
+h1{
+  margin: 1rem;
+}
+/* now to targer card */
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.186);
+  border-radius: 24px;
+  background-color: white;
+  max-width: 500px;
+}
+/* flexbox zombies, flexbox froggy */
+.card .profilepic{
+  width: 250px;
+  margin: 2rem 0;
+  height: auto;
+  border-radius: 50%;
+  border: 8px solid #eee;
+  order: -1;
+}
+
+.card h2{
+  padding-bottom: .5rem;
+}
+.card a{
+  text-decoration: none;
+  font-size: 18px;
+  color: rgb(24, 24, 159);
+  padding-bottom: 1rem;
+}
+
+.card p{
+  max-width: 80%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+
+.social-links{
+  display: flex;
+  /* by default its row you know this
+  from flexbox zombies
+  not adding is the same as this */
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.social-links .social-div{
+  border: 1px solid rgba(0, 0, 0, 0.192);
+  padding: .45rem;
+  background-color: #eee;
+  border-radius: 4px;
+}
+.social-div a{
+  color: hsl(0, 0%, 30%);
+}

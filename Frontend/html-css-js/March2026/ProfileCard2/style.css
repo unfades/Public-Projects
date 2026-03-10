@@ -1,0 +1,165 @@
+/* resets */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* trying dark-theme technique via
+prefers-color-scheme media query */
+:root{
+  font-family: Arial, Helvetica, sans-serif;
+  --orangefont: hsl(39, 100%, 41%);
+  --linkfont: hsl(240, 74%, 36%);
+  --greyishbg: hsl(0, 0%, 30%);
+  --border:rgba(0, 0, 0, 0.186);
+  --bgcolor: whitesmoke;
+  --cardcolor: white;
+  --imgborder: #eee;
+  --socialcolor: hsl(0 ,0%, 30%);
+}
+
+@media(prefers-color-scheme: dark){
+  :root{
+    color: rgb(187, 187, 187);
+    --orangefont: hsl(39, 100%, 59%);
+    --linkfont: hsl(229, 78%, 75%);
+    --greyishbg: hsl(0, 0%, 30%);
+    --border:rgba(195, 195, 195, 0.186);
+    --bgcolor: rgb(26, 26, 26);
+    --cardcolor: rgb(33, 33, 33);
+    --imgborder: #111;
+    --socialcolor: hsl(47, 41%, 49%);
+  }
+  h2{
+    color: whitesmoke;
+  }
+}
+
+img{
+  display: block;
+}
+
+
+/* utility */
+.nowrap{
+  white-space: nowrap;
+}
+
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100dvh;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--bgcolor);
+  /* from flexbox zombies again
+  flex grow flex shrink flex basis*/
+  flex-grow: 1;
+  align-self: stretch;
+  /* now main covers body all throughout */
+}
+
+h1{
+  margin: 1rem;
+}
+/* now to targer card */
+.card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  background-color: var(--cardcolor);
+  max-width: 500px;
+}
+/* flexbox zombies, flexbox froggy */
+.card .profilepic{
+  width: 250px;
+  margin: 2rem 0;
+  height: auto;
+  border-radius: 50%;
+  border: 8px solid var(--imgborder);
+  order: -1;
+}
+
+.card h2{
+  padding-bottom: .5rem;
+}
+.card a{
+  text-decoration: none;
+  font-size: 18px;
+  color: var(--linkfont);
+  padding-bottom: 1rem;
+}
+
+.card .role{
+  color: var(--orangefont);
+}
+
+.card p{
+  max-width: 80%;
+  text-align: center;
+  font-size: 18px;
+  padding-bottom: 1rem;
+}
+
+.skill-links{
+  display: flex;
+  gap: 1rem;
+  padding-bottom: .5rem;
+  padding-bottom: 2rem;
+}
+
+.skill-div{
+  border: 1px solid rgba(0, 0, 0, 0);
+  padding: .45rem;
+  background-color: var(--bgcolor);
+  border-radius: 4px;
+}
+
+.skill-div span{
+  color: var(--linkfont);
+}
+
+/* .skilldiv p{
+  do not put p inside div to you know
+  center it like these it has its own little
+  margins paddings default css to worry about
+} */
+.social-links{
+  display: flex;
+  /* by default its row you know this
+  from flexbox zombies
+  not adding is the same as this */
+  flex-direction: row;
+  gap: 1rem;
+  padding-bottom: 2rem;
+}
+.social-links .social-div{
+  border: 1px solid var(--border);
+  padding: .45rem;
+  background-color: var(--bgcolor);
+  border-radius: 4px;
+}
+.social-div a{
+  color: var(--socialcolor);
+}
+
+/* temp for mobile */
+@media screen and (max-width: 520px) {
+  .card{
+    scale: 0.75;
+  }
+  .nowrap{
+    white-space: wrap;
+  }
+  .skill-div span{
+    font-size: 12px;
+  }
+}
