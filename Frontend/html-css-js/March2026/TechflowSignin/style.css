@@ -455,3 +455,13 @@ form {
 .tos{
   font-size: 12px;
 }
+
+@media screen and (max-width: 700px){
+  .info-div p.desc{
+    font-size: 20px;
+  }
+
+  .container{
+    scale: .85;
+  }
+}
