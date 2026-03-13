@@ -1,0 +1,14 @@
+ionicons alternative to fontawesome icons.
+Got tired of their pro tier gatekeeping some icons from me.
+NO MORE.
+
+Stroke width can
+be adjusted with 
+ionicons...
+
+when using the outlined variant
+of ionicons you can adjust the stroke width.
+
+--ionicon-stroke-width is what is used for it
+by default its set to 32px.
+lets do it for the techflow logo.

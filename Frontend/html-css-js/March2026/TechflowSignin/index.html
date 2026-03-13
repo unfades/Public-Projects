@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechFlow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main>
+    <div class="info-div">
+      <div class="info-div-content">
+        <div class="techflow-container">
+          <div class="logo-div">
+            <div>
+              <ion-icon name="flash-outline"></ion-icon>
+            </div>
+          </div>
+          <h1>TechFlow</h1>
+          <span>Innovation Hub</span>
+        </div>
+        <h2>Welcome Back to <span class="nowrap">The Future</span></h2>
+        <p class="desc">Access your dashboard and continue building amazing <span class="nowrap">things with
+            cutting-edge
+            technology.</span></p>
+
+        <div class="guarantees-container">
+          <div class="guarantee-div">
+            <div class="g-logo-div">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <h3>Secure Authentication</h3>
+            <span>Bank-level encryption and security</span>
+          </div>
+          <div class="guarantee-div">
+            <div class="g-logo-div">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <h3>Multi-Device Access</h3>
+            <span>Seamless Across All Your Devices</span>
+          </div>
+          <div class="guarantee-div">
+            <div class="g-logo-div">
+              <ion-icon name="checkmark-circle"></ion-icon>
+            </div>
+            <h3>24/7 Support</h3>
+            <span>Always here when you need us</span>
+          </div>
+        </div>
+
+        <div class="status-div">
+          <div>
+            <p><span class="status-bullet">&bull;</span>All Systems Operational</p>
+          </div>
+          <div>
+            <p><span class="status-users">10k+</span><span class="active-users-text">active users</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-div-2">
+      <div class="info-div-content-2">
+        <div class="container">
+          <h2>Sign In</h2>
+          <p>Enter your credentials to access your account</p>
+          <div class="social-row">
+            <button type="button" class="social-btn" aria-label="Sign in with Google">
+              <img class="google-logo" src="google.png" alt="google"> Google
+            </button>
+            <button type="button" class="social-btn" aria-label="Sign in with Google">
+              <img class="github-logo" src="github.png" alt="github"> Github
+            </button>
+          </div>
+          <div class="or-divider">
+           <hr><div>or continue with email</div><hr>
+          </div>
+          <form>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <!-- setting required when submitted it will say required when not entered -->
+              <!-- also learned that when putting for in labels in html5, it will make it so when clicked
+            it will make the cursor be put in the textbox connected to it-->
+              <div class="front-icon-at"><ion-icon name="at-outline"></ion-icon></div>
+              <input id="email" type="email" placeholder="example@gmail.com" required aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="password">Password</label>
+              <div class="front-icon-lock"><ion-icon name="lock-closed-outline"></ion-icon></ion-icon></div>
+              <input id="password" type="password" placeholder="•••••••••">
+              
+            </div>
+            <div class="remember-row">
+              <input id="remember-me" name="remember-me" type="checkbox" aria-checked="false">
+              <!-- see here its the same, for = "remember-me and input checkbox id is remember-me,
+           then when you click the text Remember me it will tick the checkbox as well!" -->
+              <label for="remember-me">Remember me</label>
+            </div>
+            <a href="#" class="forgot-pass">Forgot password?</a>
+            <button for="email" autocomplete="email" required aria-required="true" type="submit" class="submit-btn"
+              aria-label="Sign in to your account">Sign in</button>
+          </form>
+          
+          <div class="signup-row">
+            <div class="create-account">
+              Don't have an account? <a href="#">Sign Up for free</a>
+            </div>
+            <div class="tos">
+              By Signing in, you agree to our <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- this time used MIT licensed
+   ion icons instead of fontawesome
+   have to paste here for it... -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
